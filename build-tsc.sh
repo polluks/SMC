@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source settings.sh
-
 # Get latest git submodules
 git submodule init
 git submodule update
@@ -14,15 +12,17 @@ rm -rf build
 mkdir build
 cd build
 
-# Delete old game directory at %HOME/tsc
-rm -rf ~/tsc
+# Delete old game directory at that is at repos/Secretchronicles/TSC/tsc/tsc
+rm -rf ../tsc
 
 # Build TSC
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$TSCGAMEDIR ..
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../tsc ..
 make
 
 # Install TSC to $HOME/tsc
 make install
 
-# Changing to game directory
-cd $TSCGAMEDIR
+# Changing back to TSC repo directory
+cd ../..
+
+echo "You can now run TSC with ./run-tsc.sh"

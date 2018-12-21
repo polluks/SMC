@@ -1,9 +1,10 @@
 #!/bin/bash
 
-source settings.sh
-
 # Changing to game directory
-cd $TSCGAMEDIR
+cd tsc/tsc
 
 # Start Game
 ./bin/tsc
+
+# Come back to original directory
+cd ../..
