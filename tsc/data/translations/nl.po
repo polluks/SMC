@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Secret Maryo Chronicles\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-06 21:19+0300\n"
+"POT-Creation-Date: 2018-12-22 01:51+0200\n"
 "PO-Revision-Date: 2014-08-30 19:45+0200\n"
 "Last-Translator: Florian Richter <fluxey@gmail.com>\n"
 "Language-Team: UNMAINTAINED\n"
@@ -162,7 +162,7 @@ msgstr "Laden van level mislukt :"
 msgid "Loading Images"
 msgstr "Plaatjes worden geladen"
 
-#: ../../src/core/game_core.cpp:500
+#: ../../src/core/game_core.cpp:495
 msgid "Loading Sounds"
 msgstr "Geluiden worden geladen"
 
@@ -345,57 +345,57 @@ msgstr "grijs"
 msgid "violet"
 msgstr ""
 
-#: ../../src/enemies/army.cpp:915 ../../src/enemies/beetle.cpp:257
-#: ../../src/enemies/bosses/turtle_boss.cpp:1003 ../../src/enemies/eato.cpp:271
-#: ../../src/enemies/flyon.cpp:565 ../../src/enemies/furball.cpp:737
-#: ../../src/enemies/gee.cpp:573 ../../src/enemies/krush.cpp:369
-#: ../../src/enemies/larry.cpp:401 ../../src/enemies/pip.cpp:356
-#: ../../src/enemies/rokko.cpp:582 ../../src/enemies/spikeball.cpp:507
-#: ../../src/enemies/thromp.cpp:678 ../../src/level/level_player.cpp:3987
+#: ../../src/enemies/army.cpp:924 ../../src/enemies/beetle.cpp:271
+#: ../../src/enemies/bosses/turtle_boss.cpp:1003 ../../src/enemies/eato.cpp:286
+#: ../../src/enemies/flyon.cpp:569 ../../src/enemies/furball.cpp:747
+#: ../../src/enemies/gee.cpp:573 ../../src/enemies/krush.cpp:379
+#: ../../src/enemies/larry.cpp:410 ../../src/enemies/pip.cpp:365
+#: ../../src/enemies/rokko.cpp:582 ../../src/enemies/spikeball.cpp:516
+#: ../../src/enemies/thromp.cpp:688 ../../src/level/level_player.cpp:3978
 #: ../../src/objects/level_entry.cpp:370 ../../src/objects/level_exit.cpp:486
 #: ../../src/objects/moving_platform.cpp:960 ../../src/video/animation.cpp:1577
 msgid "Direction"
 msgstr "Richting"
 
-#: ../../src/enemies/army.cpp:915 ../../src/enemies/beetle.cpp:257
+#: ../../src/enemies/army.cpp:924 ../../src/enemies/beetle.cpp:271
 #: ../../src/enemies/bosses/turtle_boss.cpp:1003
-#: ../../src/enemies/furball.cpp:737 ../../src/enemies/gee.cpp:573
-#: ../../src/enemies/krush.cpp:369 ../../src/enemies/larry.cpp:401
-#: ../../src/enemies/spikeball.cpp:507
+#: ../../src/enemies/furball.cpp:747 ../../src/enemies/gee.cpp:573
+#: ../../src/enemies/krush.cpp:379 ../../src/enemies/larry.cpp:410
+#: ../../src/enemies/spikeball.cpp:516
 #: ../../src/objects/moving_platform.cpp:960
 msgid "Starting direction."
 msgstr "Begin richting"
 
-#: ../../src/enemies/beetle.cpp:268
+#: ../../src/enemies/beetle.cpp:282
 msgid "Color"
 msgstr ""
 
-#: ../../src/enemies/beetle.cpp:268
+#: ../../src/enemies/beetle.cpp:282
 msgid "Color."
 msgstr ""
 
-#: ../../src/enemies/beetle_barrage.cpp:352 ../../src/enemies/gee.cpp:609
+#: ../../src/enemies/beetle_barrage.cpp:357 ../../src/enemies/gee.cpp:609
 msgid "Fly distance"
 msgstr "Vliegafstand"
 
-#: ../../src/enemies/beetle_barrage.cpp:352
+#: ../../src/enemies/beetle_barrage.cpp:357
 msgid "Initial beetle flying distance"
 msgstr ""
 
-#: ../../src/enemies/beetle_barrage.cpp:359
+#: ../../src/enemies/beetle_barrage.cpp:364
 #, fuzzy
 msgid "Action range"
 msgstr "Richting bereik"
 
-#: ../../src/enemies/beetle_barrage.cpp:359
+#: ../../src/enemies/beetle_barrage.cpp:364
 msgid "Radius in which it reacts on Alex"
 msgstr ""
 
-#: ../../src/enemies/beetle_barrage.cpp:365
+#: ../../src/enemies/beetle_barrage.cpp:370
 msgid "Count"
 msgstr ""
 
-#: ../../src/enemies/beetle_barrage.cpp:365
+#: ../../src/enemies/beetle_barrage.cpp:370
 msgid "Number of beetles spit out at a time"
 msgstr ""
 
@@ -408,12 +408,12 @@ msgid "Hits until a downgrade"
 msgstr "Treffers tot degraderen"
 
 #: ../../src/enemies/bosses/turtle_boss.cpp:1015
-#: ../../src/enemies/furball.cpp:745
+#: ../../src/enemies/furball.cpp:755
 msgid "Downgrades"
 msgstr "Degradaties"
 
 #: ../../src/enemies/bosses/turtle_boss.cpp:1015
-#: ../../src/enemies/furball.cpp:745
+#: ../../src/enemies/furball.cpp:755
 msgid "Downgrades until death"
 msgstr "Dagradaties tot dood"
 
@@ -428,11 +428,11 @@ msgstr "Tijd verlopen als schild herrijst"
 #: ../../src/enemies/bosses/turtle_boss.cpp:1032
 #: ../../src/enemies/bosses/turtle_boss.cpp:1036
 #: ../../src/enemies/bosses/turtle_boss.cpp:1093
-#: ../../src/enemies/furball.cpp:753 ../../src/enemies/furball.cpp:758
-#: ../../src/enemies/furball.cpp:775 ../../src/enemies/gee.cpp:586
+#: ../../src/enemies/furball.cpp:763 ../../src/enemies/furball.cpp:768
+#: ../../src/enemies/furball.cpp:785 ../../src/enemies/gee.cpp:586
 #: ../../src/enemies/gee.cpp:591 ../../src/enemies/gee.cpp:644
-#: ../../src/enemies/static.cpp:345 ../../src/enemies/static.cpp:349
-#: ../../src/enemies/static.cpp:418 ../../src/objects/bonusbox.cpp:507
+#: ../../src/enemies/static.cpp:348 ../../src/enemies/static.cpp:352
+#: ../../src/enemies/static.cpp:421 ../../src/objects/bonusbox.cpp:507
 #: ../../src/objects/bonusbox.cpp:511 ../../src/objects/bonusbox.cpp:619
 #: ../../src/overworld/world_waypoint.cpp:542
 #: ../../src/overworld/world_waypoint.cpp:546
@@ -442,9 +442,9 @@ msgstr "Aangezet"
 
 #: ../../src/enemies/bosses/turtle_boss.cpp:1033
 #: ../../src/enemies/bosses/turtle_boss.cpp:1039
-#: ../../src/enemies/furball.cpp:754 ../../src/enemies/furball.cpp:761
+#: ../../src/enemies/furball.cpp:764 ../../src/enemies/furball.cpp:771
 #: ../../src/enemies/gee.cpp:587 ../../src/enemies/gee.cpp:594
-#: ../../src/enemies/static.cpp:346 ../../src/enemies/static.cpp:352
+#: ../../src/enemies/static.cpp:349 ../../src/enemies/static.cpp:355
 #: ../../src/objects/bonusbox.cpp:508 ../../src/objects/bonusbox.cpp:514
 #: ../../src/objects/box.cpp:691 ../../src/objects/box.cpp:706
 #: ../../src/overworld/world_waypoint.cpp:543
@@ -453,46 +453,46 @@ msgid "Disabled"
 msgstr "Uitgezet"
 
 #: ../../src/enemies/bosses/turtle_boss.cpp:1042
-#: ../../src/enemies/furball.cpp:755
+#: ../../src/enemies/furball.cpp:765
 msgid "End Level"
 msgstr ""
 
 #: ../../src/enemies/bosses/turtle_boss.cpp:1042
-#: ../../src/enemies/furball.cpp:755
+#: ../../src/enemies/furball.cpp:765
 msgid "End the level if it is killed."
 msgstr ""
 
-#: ../../src/enemies/eato.cpp:275 ../../src/enemies/flyon.cpp:569
-#: ../../src/enemies/thromp.cpp:682
+#: ../../src/enemies/eato.cpp:290 ../../src/enemies/flyon.cpp:573
+#: ../../src/enemies/thromp.cpp:692
 msgid "Image directory"
 msgstr "Plaatjes folder"
 
-#: ../../src/enemies/eato.cpp:275 ../../src/enemies/flyon.cpp:569
-#: ../../src/enemies/thromp.cpp:682
+#: ../../src/enemies/eato.cpp:290 ../../src/enemies/flyon.cpp:573
+#: ../../src/enemies/thromp.cpp:692
 msgid "Directory containing the images"
 msgstr "Folder die de plaatjes bevat"
 
-#: ../../src/enemies/flyon.cpp:565 ../../src/enemies/rokko.cpp:582
-#: ../../src/enemies/thromp.cpp:678
+#: ../../src/enemies/flyon.cpp:569 ../../src/enemies/rokko.cpp:582
+#: ../../src/enemies/thromp.cpp:688
 msgid "Direction it moves into."
 msgstr "Richting die het opgaat"
 
-#: ../../src/enemies/flyon.cpp:576 ../../src/enemies/gee.cpp:577
-#: ../../src/enemies/thromp.cpp:689 ../../src/objects/moving_platform.cpp:964
+#: ../../src/enemies/flyon.cpp:580 ../../src/enemies/gee.cpp:577
+#: ../../src/enemies/thromp.cpp:699 ../../src/objects/moving_platform.cpp:964
 msgid "Distance"
 msgstr "Afstand"
 
-#: ../../src/enemies/flyon.cpp:576
+#: ../../src/enemies/flyon.cpp:580
 msgid "Movable Distance into its direction"
 msgstr "Beweegbare Afstand in zijn richting"
 
-#: ../../src/enemies/flyon.cpp:584 ../../src/enemies/rokko.cpp:586
-#: ../../src/enemies/static.cpp:336 ../../src/enemies/thromp.cpp:697
+#: ../../src/enemies/flyon.cpp:588 ../../src/enemies/rokko.cpp:586
+#: ../../src/enemies/static.cpp:339 ../../src/enemies/thromp.cpp:707
 #: ../../src/objects/moving_platform.cpp:972
 msgid "Speed"
 msgstr "Snelheid"
 
-#: ../../src/enemies/flyon.cpp:584
+#: ../../src/enemies/flyon.cpp:588
 msgid "Initial speed when jumping out"
 msgstr "Begin snelheid tijdens uitspringen"
 
@@ -520,58 +520,58 @@ msgstr "Tijd te wachten tot weer bewegen na een stop"
 msgid "The distance to move each time"
 msgstr "De afstand die elke keer beweegt"
 
-#: ../../src/enemies/pip.cpp:356
+#: ../../src/enemies/pip.cpp:365
 #, fuzzy
 msgid "Starting direction"
 msgstr "Begin richting"
 
-#: ../../src/enemies/rokko.cpp:586 ../../src/enemies/thromp.cpp:697
+#: ../../src/enemies/rokko.cpp:586 ../../src/enemies/thromp.cpp:707
 msgid "Speed when activated"
 msgstr "Snelheid wanneer geactiveerd"
 
-#: ../../src/enemies/static.cpp:314 ../../src/objects/sprite.cpp:1458
+#: ../../src/enemies/static.cpp:317 ../../src/objects/sprite.cpp:1460
 msgid "Image"
 msgstr "Plaatje"
 
-#: ../../src/enemies/static.cpp:314 ../../src/objects/sprite.cpp:1458
+#: ../../src/enemies/static.cpp:317 ../../src/objects/sprite.cpp:1460
 #: ../../src/video/animation.cpp:1403
 msgid "Image filename"
 msgstr "Plaatje bestandsnaam"
 
-#: ../../src/enemies/static.cpp:321
+#: ../../src/enemies/static.cpp:324
 msgid "Rotation Speed"
 msgstr "Rotatie Snelheid"
 
-#: ../../src/enemies/static.cpp:329 ../../src/objects/level_exit.cpp:550
+#: ../../src/enemies/static.cpp:332 ../../src/objects/level_exit.cpp:550
 #: ../../src/objects/moving_platform.cpp:945
 msgid "Path Identifier"
 msgstr "Pad Identificeerder"
 
-#: ../../src/enemies/static.cpp:329 ../../src/objects/moving_platform.cpp:945
+#: ../../src/enemies/static.cpp:332 ../../src/objects/moving_platform.cpp:945
 msgid "Name of the Path to move along."
 msgstr "Naam van het pad om door te gaan."
 
-#: ../../src/enemies/static.cpp:336 ../../src/objects/moving_platform.cpp:972
+#: ../../src/enemies/static.cpp:339 ../../src/objects/moving_platform.cpp:972
 msgid "Maximum speed"
 msgstr "Maximum snelheid"
 
-#: ../../src/enemies/static.cpp:356
+#: ../../src/enemies/static.cpp:359
 msgid "Fire Resistant"
 msgstr "Vuurbestendig"
 
-#: ../../src/enemies/static.cpp:356
+#: ../../src/enemies/static.cpp:359
 msgid "If it is resistant against fire"
 msgstr "Als het vuurbestendig is"
 
-#: ../../src/enemies/static.cpp:360
+#: ../../src/enemies/static.cpp:363
 msgid "Ice Resistance"
 msgstr "Ijsbestendig"
 
-#: ../../src/enemies/static.cpp:360
+#: ../../src/enemies/static.cpp:363
 msgid "Resistance against Ice (0.0-1.0)"
 msgstr "Bestendigd tegen ijs (0.0-1.0)"
 
-#: ../../src/enemies/thromp.cpp:689
+#: ../../src/enemies/thromp.cpp:699
 msgid "Detection distance into its direction"
 msgstr "Detectie afstand in zijn richting"
 
@@ -606,18 +606,18 @@ msgstr ""
 msgid "(#inspect did not return a string)\n"
 msgstr ""
 
-#: ../../src/gui/hud.cpp:165
+#: ../../src/gui/hud.cpp:168
 #, c-format
 msgid "Time %02d:%02d"
 msgstr "Tijd %02d:%02d"
 
 #. TRANS: Do not translate the part in brackets
-#: ../../src/gui/hud.cpp:195
+#: ../../src/gui/hud.cpp:198
 #, c-format
 msgid "[colour='FFFFFF00']FPS: Best: %.02f Worst: %.02f Current: %0.2f"
 msgstr ""
 
-#: ../../src/gui/hud.cpp:209
+#: ../../src/gui/hud.cpp:212
 #, fuzzy, c-format
 msgid "Points %08ld"
 msgstr "Punten %08d"
@@ -647,7 +647,7 @@ msgid "Enter"
 msgstr ""
 
 #: ../../src/gui/menu_data.cpp:635 ../../src/gui/menu_data.cpp:1434
-#: ../../src/gui/menu_data.cpp:3125
+#: ../../src/gui/menu_data.cpp:3120
 msgid "Back"
 msgstr "Terug"
 
@@ -740,8 +740,8 @@ msgstr "Altijd rennen"
 #: ../../src/gui/menu_data.cpp:2243 ../../src/gui/menu_data.cpp:2438
 #: ../../src/gui/menu_data.cpp:2571 ../../src/gui/menu_data.cpp:2587
 #: ../../src/gui/menu_data.cpp:2641 ../../src/gui/menu_data.cpp:2649
-#: ../../src/gui/menu_data.cpp:2750 ../../src/gui/menu_data.cpp:2785
-#: ../../src/gui/menu_data.cpp:3005 ../../src/gui/menu_data.cpp:3031
+#: ../../src/gui/menu_data.cpp:2750 ../../src/gui/menu_data.cpp:2780
+#: ../../src/gui/menu_data.cpp:3000 ../../src/gui/menu_data.cpp:3026
 msgid "On"
 msgstr "Aan"
 
@@ -876,7 +876,8 @@ msgstr ""
 msgid "Joystick"
 msgstr "Joystick"
 
-#: ../../src/gui/menu_data.cpp:1863 ../../src/gui/menu_data.cpp:2915
+#: ../../src/gui/menu_data.cpp:1863 ../../src/gui/menu_data.cpp:2910
+#: ../../src/level/level_settings.cpp:194
 msgid "None"
 msgstr "Geen"
 
@@ -1011,39 +1012,31 @@ msgstr "Herinitialisatie"
 msgid "Reloading"
 msgstr "Herladen"
 
-#: ../../src/gui/menu_data.cpp:2759
-msgid ""
-"Music addon not detected.\n"
-"You can download it from the Website."
-msgstr ""
-"Muziek plugin niet gevonden.\n"
-"Deze is te downloaden vanaf de website."
-
-#: ../../src/gui/menu_data.cpp:2896
+#: ../../src/gui/menu_data.cpp:2891
 msgid "Enabled : "
 msgstr "Ingeschakeld :"
 
-#: ../../src/gui/menu_data.cpp:3111 ../../src/gui/menu_data.cpp:3113
+#: ../../src/gui/menu_data.cpp:3106 ../../src/gui/menu_data.cpp:3108
 #, fuzzy
 msgid "Save"
 msgstr "Opslaan"
 
-#: ../../src/gui/menu_data.cpp:3112
+#: ../../src/gui/menu_data.cpp:3107
 #, fuzzy
 msgid "Save the game"
 msgstr "Opgeslagen spel"
 
-#: ../../src/gui/menu_data.cpp:3118 ../../src/gui/menu_data.cpp:3120
+#: ../../src/gui/menu_data.cpp:3113 ../../src/gui/menu_data.cpp:3115
 #, fuzzy
 msgid "Load"
 msgstr "Wordt geladen"
 
-#: ../../src/gui/menu_data.cpp:3119
+#: ../../src/gui/menu_data.cpp:3114
 #, fuzzy
 msgid "Load a saved game"
 msgstr "Opslaan level mislukt"
 
-#: ../../src/gui/menu_data.cpp:3283
+#: ../../src/gui/menu_data.cpp:3272
 msgid ""
 "3000 Points needed for saving in a level.\n"
 "Saving on the Overworld is free."
@@ -1051,17 +1044,17 @@ msgstr ""
 "3000 Punten nodig om op te slaan in een level. \n"
 "Opslaan in de Overwereld is gratis."
 
-#: ../../src/gui/menu_data.cpp:3304 ../../src/gui/menu_data.cpp:3308
-#: ../../src/gui/menu_data.cpp:3313
+#: ../../src/gui/menu_data.cpp:3293 ../../src/gui/menu_data.cpp:3297
+#: ../../src/gui/menu_data.cpp:3302
 msgid "No Description"
 msgstr "Geen omschrijving"
 
-#: ../../src/gui/menu_data.cpp:3317
+#: ../../src/gui/menu_data.cpp:3306
 msgid "Enter Description"
 msgstr "Voer beschrijving in"
 
-#: ../../src/gui/menu_data.cpp:3335 ../../src/gui/menu_data.cpp:3340
-#: ../../src/gui/menu_data.cpp:3345
+#: ../../src/gui/menu_data.cpp:3324 ../../src/gui/menu_data.cpp:3329
+#: ../../src/gui/menu_data.cpp:3334
 #, fuzzy
 msgid "Savegame loading failed"
 msgstr "Laden Opgeslagen Spel Mislukt :"
@@ -1113,29 +1106,29 @@ msgstr " Bewerker Z :"
 msgid "FINISH"
 msgstr ""
 
-#: ../../src/level/level.cpp:220
+#: ../../src/level/level.cpp:221
 msgid "Unsupported Level format : "
 msgstr ""
 
-#: ../../src/level/level.cpp:404
+#: ../../src/level/level.cpp:405
 msgid "Couldn't save level "
 msgstr "Opslaan level mislukt"
 
-#: ../../src/level/level.cpp:420 ../../src/level/level_editor.cpp:148
+#: ../../src/level/level.cpp:421 ../../src/level/level_editor.cpp:148
 msgid "Level "
 msgstr "Level"
 
-#: ../../src/level/level.cpp:420 ../../src/overworld/overworld.cpp:252
-#: ../../src/video/video.cpp:1486
+#: ../../src/level/level.cpp:421 ../../src/overworld/overworld.cpp:249
+#: ../../src/video/video.cpp:1495
 msgid " saved"
 msgstr " opgeslagen"
 
-#: ../../src/level/level.cpp:824
+#: ../../src/level/level.cpp:828
 #, fuzzy
 msgid "Omega Mode disabled"
 msgstr "Level Bewerker uitgeschakeld"
 
-#: ../../src/level/level.cpp:827
+#: ../../src/level/level.cpp:831
 msgid "Omega Mode enabled"
 msgstr ""
 
@@ -1167,7 +1160,7 @@ msgstr "Laad een Level"
 msgid "Loaded "
 msgstr "Geladen"
 
-#: ../../src/level/level_editor.cpp:208 ../../src/level/level_settings.cpp:256
+#: ../../src/level/level_editor.cpp:208 ../../src/level/level_settings.cpp:276
 #: ../../src/overworld/world_editor.cpp:129
 msgid "Save "
 msgstr "Opslaan"
@@ -1192,13 +1185,22 @@ msgstr "Verwijder en laad uit"
 msgid "Reload Level ?"
 msgstr "Herlaad Level ?"
 
-#: ../../src/level/level_manager.cpp:478
+#: ../../src/level/level_manager.cpp:477
 msgid "Invalid target level."
 msgstr ""
 
-#: ../../src/level/level_player.cpp:3987
+#: ../../src/level/level_player.cpp:3978
 msgid "Initial direction"
 msgstr "Initiële richting"
+
+#: ../../src/level/level_settings.cpp:193
+#: ../../src/level/level_settings.cpp:448
+#: ../../src/level/level_settings.cpp:604
+#: ../../src/overworld/world_waypoint.cpp:757
+#: ../../src/overworld/world_waypoint.cpp:760
+#, fuzzy
+msgid "(None)"
+msgstr "Geen"
 
 #: ../../src/objects/bonusbox.cpp:79 ../../src/objects/bonusbox.cpp:152
 #, fuzzy
@@ -1709,11 +1711,11 @@ msgstr "Naamloos"
 msgid "Couldn't save world description "
 msgstr "Opslaan wereld omschrijving mislukt"
 
-#: ../../src/overworld/overworld.cpp:247
+#: ../../src/overworld/overworld.cpp:244
 msgid "Couldn't save world "
 msgstr "Opslaan wereld mislukt"
 
-#: ../../src/overworld/overworld.cpp:252
+#: ../../src/overworld/overworld.cpp:249
 #: ../../src/overworld/world_editor.cpp:88
 msgid "World "
 msgstr "Wereld"
@@ -1877,14 +1879,8 @@ msgid ""
 "target waypoint if you unlock by default!"
 msgstr ""
 
-#: ../../src/overworld/world_waypoint.cpp:757
-#: ../../src/overworld/world_waypoint.cpp:760
-#, fuzzy
-msgid "(None)"
-msgstr "Geen"
-
 #. TRANS: Prompt issued in the game console
-#: ../../src/scripting/scripting.cpp:102
+#: ../../src/scripting/scripting.cpp:103
 msgid "(console)"
 msgstr ""
 
@@ -2125,13 +2121,20 @@ msgstr "Herstellen Texturen"
 msgid "This program is distributed under the terms of the GPLv3"
 msgstr ""
 
-#: ../../src/video/video.cpp:456
+#: ../../src/video/video.cpp:465
 msgid "Caching Images failed : Could not remove old images"
 msgstr "Vangen Afbeeldingen mislukt : Verwijderen oude afbeeldingen mislukt"
 
-#: ../../src/video/video.cpp:479
+#: ../../src/video/video.cpp:488
 msgid "Caching Images"
 msgstr "Vangen Afbeelden"
+
+#~ msgid ""
+#~ "Music addon not detected.\n"
+#~ "You can download it from the Website."
+#~ msgstr ""
+#~ "Muziek plugin niet gevonden.\n"
+#~ "Deze is te downloaden vanaf de website."
 
 #~ msgid "Analog Jump"
 #~ msgstr "Analoge Sprong"
