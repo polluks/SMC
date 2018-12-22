@@ -21,6 +21,7 @@
 /tsc/build
 /tsc/crossbuild
 /tsc/CMakeFiles
+/tsc/tsc
 
 # Alternate build directory
 /build
