@@ -492,8 +492,8 @@ was not yet translated. What you would do is the following:
 
       text_always_run->setText(UTF8_("Always Run"));
 
-   `UTF_8()` is the translation macro that will query Gettext for the
-   translation of its argument; see above already. `setText()`
-   overwrites the label with its return value.
+    `UTF_8()` is the translation macro that will query Gettext for the
+    translation of its argument; see above already. `setText()`
+    overwrites the label with its return value.
 14. Update the POT file, update a language file, translate, recompile
     TSC. The label should now show the translated content.
