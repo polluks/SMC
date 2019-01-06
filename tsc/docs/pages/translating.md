@@ -490,7 +490,7 @@ was not yet translated. What you would do is the following:
 
 13. Now you can finally translate the label. Add this line:
 
-      text_always_run->setText(UTF8_("Always Run"));
+        text_always_run->setText(UTF8_("Always Run"));
 
     `UTF_8()` is the translation macro that will query Gettext for the
     translation of its argument; see above already. `setText()`
