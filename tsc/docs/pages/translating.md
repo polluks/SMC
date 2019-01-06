@@ -279,19 +279,19 @@ $ rake potfile
 Rule No. 1: Read the [Gettext manual](https://www.gnu.org/software/gettext/manual).
 
 As a developer, always use the macros defined at the top of `i18n.hpp`
-for retrieving the translations, don’t call gettext() directly, or
-your strings will not be found by `xgettext`. If for example you want
-to make "Hello, world" translatable, this is how it would look like:
+for retrieving the translations in the C++ code. Don’t call gettext()
+directly, or your strings will not be found by `xgettext`. If for
+example you want to make "Hello, world" translatable, this is how it
+would look like:
 
 ~~~~~~~~~~~~~~~~~~{.cpp}
 std::cout << _("Hello, world") << std::endl;
 ~~~~~~~~~~~~~~~~~~
 
 This way, `xgettext` as called by `rake potfile` will find the string
-and add it to the `.pot` file so that translators can find it. Avoid
-the use of the `UTF8_()` macro, it only exists for CEGUI 0.7
-interaction and should be removed when the CEGUI 0.8 move has been
-completed.
+and add it to the `.pot` file so that translators can find it. The
+`UTF8_()` macro is specific to translation of CEGUI strings (see
+below).
 
 Be sure to use the `PL_()` macro when you have messages that report
 amounts of something. Different languages can have more plural forms
@@ -349,3 +349,152 @@ std::cout << C_("hunting", "game") << std::endl;
 
 In that example, `xgettext` will add _two_ entries to the `.pot`
 file. Also, please always use _lowercase_ for the context names.
+
+#### Translation of GUI elements
+
+The above works fine for any strings that are not managed by CEGUI,
+e.g. console output or strings directly given to SFML. Translating
+CEGUI elements is quite a bit more involved, because *CEGUI on itself
+does not have i18n capabilities*. That is, you can't just have CEGUI
+automatically translate any texts.
+
+You should first understand how CEGUI works. For that, refer to the
+[CEGUI documentation](http://static.cegui.org.uk/docs/), specifically
+read the "Beginner's Tutorials". From these tutorials, you will learn
+that the actual GUI layout is described using XML files. Those we're
+interested in for translation are the `.layout` XML files as these
+describe where CEGUI places what on the GUI. In TSC, these files are
+stored in the `tsc/data/gui/layouts` directory and are announced to
+CEGUI in `cVideo::Init_CEGUI()`. To understand what this function does,
+refer to the aforementioned CEGUI tutorials.
+
+When TSC wants to draw a GUI window, what happens is this:
+
+1. CEGUI is asked to load a specific layout XML file.
+2. Using specific CEGUI getter methods, the target window's C++
+   representation (object) is retrieved from CEGUI.
+3. Any custom modifications to the window object that
+   cannot be done in XML are executed by TSC.
+4. The window is shown on the screen.
+
+The translation of GUI strings shown via CEGUI happens in step 3
+above, because CEGUI's layout XML does not allow for translations.
+TSC resorts to a small hack to allow for translation of GUI strings:
+the string for a GUI element as written down in the layout XML file is
+replaced at runtime by TSC. TSC invokes one of the i18n functions
+described above (usually `UTF8_()`, see below) and replaces the GUI
+element's content with the result from Gettext. Since one cannot give
+dynamic strings to Gettext (`xgettext` would not be able to extract
+them from the code for translation), the string is repeated in the
+code for translation rather than just taken from the XML. In
+consequence, after the hack has been applied, the static string that
+is used in the layout XML file is *never actually shown to the user*
+anymore.
+
+In order to make a specific string in the GUI translatable, you thus
+have to:
+
+1. Find out in which layout XML file the string resides.
+2. Find the element whose text you want to translate.
+3. Find the place in the code where the XML file is loaded.
+4. Find the place in the code where the element is retrieved.
+   It may happen that the element itself is not retrieved.
+   TSC usually fetches the entire window from CEGUI and displays
+   that. In that case, you need to call some CEGUI functions to
+   wire out the actual element you want to translate so that you
+   can
+5. Apply the hack described above.
+
+**Important note**: When passing translated strings to CEGUI
+functions, always use the translation macro `UTF8_()`. This macro does
+some type casting required to make CEGUI aware that the string it
+receives is already encoded in UTF-8 (just look up its definition in
+`i18n.hpp`). If you use the ordinary `_()` macro family, CEGUI thinks
+it is passed ISO-8859-* and wants to transcode the string into UTF-8,
+resulting in garbage.
+
+The entire process is illustrated by the following example. In the
+Options menu, on the initial "Game" tab, there is an option called
+"Always Run", which is associated with a combobox. Suppose that option
+was not yet translated. What you would do is the following:
+
+1. Find out which part of TSC's C++ code is responsible for drawing
+   the "Game" options menu. After hours of digging around, you finally
+   arrive at `cMenu_Options::Init_GUI_Game()` in `gui/menu_data.cpp`,
+   because you successfully found that the combobox for that option
+   is bound to a variable with the fitting name
+   `m_game_combo_always_run` (which you probably found with grep(1)).
+2. Now you look around the code to find out where that variable
+   receives its value. You find this line in `menu_data.cpp`:
+
+       m_game_combo_always_run = static_cast<CEGUI::Combobox*>(p_root->getChild("options/window_options/tabcontrol_main/tab_game/game_combo_always_run"));
+
+3. This is a good hint. It tells you that the combobox is a
+   grandgrand...grandchild of a CEGUI window that is bound to the
+   `p_root` variable. Take note of the argument to `getChild()`,
+   you'll need it later.
+4. For the purpose of this example, we suppose that the label that
+   shows the static string "Always Run" next to the combobox does not
+   already appear in the TSC C++ code. You however rightly suppose
+   that this static label is defined near to the combobox in the layout XML.
+5. Time to find out which the layout XML file we need is. To do that,
+   find out where `p_root` receives its value. You find this line:
+
+       CEGUI::Window* p_root = CEGUI::System::getSingleton().getDefaultGUIContext().getRootWindow();
+
+6. Bummer. This is a shortcut to retrieve the current root window from
+   CEGUI rather than loading it from the XML file. The window needs to
+   have been loaded before obviously. You bang your head
+   against the table.
+7. By virtuous power of the search function of your editor you used to
+   search for the string `.layout` (the file extension of CEGUI layout
+   files, luckily used consequently in TSC), you finally find that
+   from the 10 layout files loaded in `menu_data.cpp`, the one loaded
+   in `cMenu_Options::Init_GUI()` looks most promising, because it's used
+   in the same class that the code operating the combobox is in. Thus,
+   you find the line
+
+       CEGUI::Window* tabwindow = wmgr.loadLayoutFromFile("menu/tab_game.layout");
+
+8. Appearently at some point `tabwindow` or one of its parents
+   advances to be the CEGUI root window, but you won't worry about
+   this detail for the moment.
+9. Using the information from step 7, you finally find that the
+   relevant layout XML file is the one in
+   `tsc/data/gui/layouts/menu/tab_game.layout`. That is, the argument
+   to `loadLayoutFromFile()` is a path relative to
+   `tsc/data/gui/layouts` (which is the path for layout files
+   advertised to CEGUI at game startup, as was explained earlier).
+10. Using the search function on that file you find first the
+   definition for the combobox. That is not interesting. Searching
+   further reveals:
+
+       <Window type="TaharezLook/StaticText" name="game_text_always_run">
+       <Property name="Text" value="Always Run"/>
+
+11. Perfect. This is the static text containing the "Always Run" label
+    next to the combobox! Take note of the value of the `name`
+    attribute. It identifies this GUI element relative to its parent
+    element. The containing XML element describes this parent; it's
+    `name` attribute is set to `tab_game`. This means that the
+    combobox and the static text share the same parent element (which
+    you also easily verify by looking for the combobox' XML again).
+12. Returning to `cMenu_Options::Init_GUI_Game()`, you can now apply
+    the translation hack. From the information in steps 11 and 3, you
+    can now construct the full path to the static label showing the
+    string "Always Run":
+    `options/window_options/tabcontrol_main/tab_game/game_text_always_run`. Use
+    that path to retrieve the label from the CEGUI root window
+    downwards, just as was done with the combobox:
+
+        CEGUI::Window* text_always_run = static_cast<CEGUI::Window*>(p_root->getChild("options/window_options/tabcontrol_main/tab_game/game_text_always_run"));
+
+13. Now you can finally translate the label. Add this line:
+
+      text_always_run->setText(UTF8_("Always Run"));
+
+   `UTF_8()` is the translation macro that will query Gettext for the
+   translation of its argument; see above already. `setText()`
+   overwrites the label with its return value.
+14. Update the POT file, update a language file, translate, recompile
+    TSC. The label should now show the translated content.
