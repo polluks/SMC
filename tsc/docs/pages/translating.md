@@ -465,11 +465,11 @@ was not yet translated. What you would do is the following:
    `tsc/data/gui/layouts` (which is the path for layout files
    advertised to CEGUI at game startup, as was explained earlier).
 10. Using the search function on that file you find first the
-   definition for the combobox. That is not interesting. Searching
-   further reveals:
+    definition for the combobox. That is not interesting. Searching
+    further reveals:
 
-       <Window type="TaharezLook/StaticText" name="game_text_always_run">
-       <Property name="Text" value="Always Run"/>
+        <Window type="TaharezLook/StaticText" name="game_text_always_run">
+        <Property name="Text" value="Always Run"/>
 
 11. Perfect. This is the static text containing the "Always Run" label
     next to the combobox! Take note of the value of the `name`
