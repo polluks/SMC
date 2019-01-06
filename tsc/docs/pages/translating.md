@@ -248,7 +248,6 @@ developers to translate the game in all the languages out there in the
 world, so please _do_ submit your translation! You can do it in one of
 the following ways:
 
-* Post to the forums at https://forum.secretchronicles.org/
 * Open an issue ticket or pull request on the tracker at
   https://github.com/Secretchronicles/TSC/issues
 * Write an email to the [mailinglist](https://lists.secretchronicles.org/).
