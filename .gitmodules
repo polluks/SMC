@@ -15,7 +15,7 @@
 	url = https://github.com/mattn/mruby-json.git
 [submodule "tinyclipboard"]
 	path = tinyclipboard
-	url = git://git.guelkerdev.de/tinyclipboard.git
+	url = git://git.guelker.eu/tinyclipboard.git
 [submodule "shared-modules"]
 	path = flatpak/shared-modules
 	url = https://github.com/flathub/shared-modules
